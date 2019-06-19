@@ -1,0 +1,38 @@
+
+Data Files
+----------
+
+PregnancyOutcomeDataStudy Stores the raw data files for this study. Each excel file refers to positive tests, negative tests, full blood counts and the perinatal datasets
+
+2006poa Contains a shapefile of QLD by postcodes to allow for plotting
+
+ATSI population by postcode.csv Is ABS 2006 Census data regarding Indigenous population statistics by postcode
+
+ATSI population by postcode formatted.csv Is the same data as the above but with the formatting removed such that it could be read into R
+
+Remoteness by postcode formatted.csv Is ABS 2006 Census data for the number of people with that remoteness classification in each postcode
+
+RemotenessByPostcode.csv Provides a single remoteness classification for each postcode by taking the majority classification within each postcode
+
+postcode_data.csv Is a cleaned version of ABS 2006 Census data for postcode level information used in the study. Merges the above datasets, which was done in excel
+
+QLD postcodes SEIFA 2006.xlsx Contains the SEIFA score for all QLD postcodes from the 2006 Census
+
+
+
+R Scripts
+---------
+
+Data Preparation.R Cleans the raw data files, merges, performs linkage corrections and creates linkage for final dataset. Includes imputation procedure that was not used in the final analysis
+
+Modelling.R Reads in data, produces all models and model summaries for the study
+
+Linkage Deletion Counts.R Takes the raw data and performs the linkage corrections only, then produces summary statistics of the procedure
+
+QLDmap.R Produces a map of QLD with a spatial representation of the data
+
+Pregnancy Outcomes By Year.R Counts the occurence of pregnancies in the data by year group
+
+Demographics.R Produces the data summary necessary for the demographics table
+
+Perinatal Demographics.R  Produces the data summary necessary for the perinatal demographics table
